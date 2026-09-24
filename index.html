@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Project</title>
+    <title>Student Portal Hub</title>
     <style>
-        body, html { margin: 0; padding: 0; overflow: hidden; background: #000; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #000000 !important; 
+            color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { margin-bottom: 8px; font-size: 2rem; color: #f3f4f6; }
+        p { color: #9ca3af; margin-bottom: 40px; }
+        .launchpad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .portal-card {
+            background-color: #1a1a1e;
+            border: 1px solid #2e2e35;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .portal-card:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6; 
+        }
+        .app-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .app-title { font-weight: 600; font-size: 1.1rem; margin-bottom: 6px; }
+        .app-desc { font-size: 0.85rem; color: #9ca3af; }
     </style>
 </head>
 <body>
-    <iframe src="https://github.io" 
-            style="width:100vw; height:100vh; border:none; margin:0; padding:0; overflow:hidden;"
-            sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-forms"
-            allow="autoplay; fullscreen; gamepad">
-    </iframe>
+
+    <h1>Classroom Launchpad</h1>
+    <p>Select a learning tool or link below to get started.</p>
+
+    <div class="launchpad-grid">
+        <a href="https://github.io" class="portal-card" target="_blank">
+            <div class="app-icon">🏎️</div>
+            <div class="app-title">Interactive Module</div>
+            <div class="app-desc">Launch standalone WebGL game player frame.</div>
+        </a>
+        <a href="https://desmos.com" class="portal-card" target="_blank">
+            <div class="app-icon">📈</div>
+            <div class="app-title">Graphing Tool</div>
+            <div class="app-desc">Plot matrix and function coordinate graphs.</div>
+        </a>
+    </div>
+
 </body>
 </html>
-
