@@ -1,44 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Docs - Working Template</title>
+    <title>My Game Mirror</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #0b0b0b;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        iframe { width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
-
-    <div id="view" style="width:100%; height:100%;"></div>
-
-    <script>
-        // Scrambled Base64 distribution link to bypass deep-packet inspection
-        const b64Data = "aHR0cHM6Ly9nYW1lcy5jcmF6eWdhbWVzLmNvbS9lbl9VUy9zbWFzaC1rYXJ0cy9pbmRleC5odG1s";
-        const realSrc = atob(b64Data);
-
-        // Compiles a dynamic data object locally inside your browser memory cache
-        const frame = document.createElement('iframe');
-        frame.setAttribute('allow', 'autoplay; gamepad; fullscreen; keyboard');
-        frame.setAttribute('sandbox', 'allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts');
-        
-        // This injects the game canvas directly into your active window thread
-        frame.src = realSrc;
-        document.getElementById('view').appendChild(frame);
-    </script>
-
+    <iframe src="https://smashkarts.io"></iframe>
 </body>
 </html>
